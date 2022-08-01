@@ -13,6 +13,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\CheckOutController;
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -123,6 +124,9 @@ Route::prefix('/')->group(function(){
     // Đăng nhập
     Route::post('/login', [AccountController::class,'login'])->name('account.login');
 });
+
+Route::get('/social/{provider}', [TestController::class,'redirect'])->name('auth.social');
+Route::get('/auth/{provider}/callback', [TestController::class,'callback'])->name('auth.social.callback');
 
 
 

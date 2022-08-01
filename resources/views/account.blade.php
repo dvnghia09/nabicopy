@@ -61,13 +61,13 @@
                     </div>
                 </div>
                 </form>
-                    <div class="modal__form-socials hiden-mb-tb hiden">
+                    <div class="modal__form-socials">
                     <a href="https://www.facebook.com/" class="btn btn--size-s btn--fb">
                         <i class="fab fa-facebook-square btn--fb-icon"></i>
                         <span class="modal__form-social-title">Kết nối với Facebook</span>
                     
                     </a>
-                    <a href="" class="btn btn--size-s btn--gg">
+                    <a href="{{ route('auth.social','google') }}" class="btn btn--size-s btn--gg">
                         <img class="size-icon-google" src="https://img.icons8.com/color/48/000000/google-logo.png"/>
                         <span class="modal__form-social-title">Kết nối với Google</span>
                         

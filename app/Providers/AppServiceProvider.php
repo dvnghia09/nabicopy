@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Helper\Cart;
 use App\Models\Category;
 use App\Models\CategorySub;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -39,5 +40,7 @@ class AppServiceProvider extends ServiceProvider
                 'cateSub'      =>  $cateSub,
              ]);
         });
+
+        Schema::defaultStringLength(191);
     }
 }
